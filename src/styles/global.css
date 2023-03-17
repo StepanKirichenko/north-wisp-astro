@@ -115,11 +115,17 @@ img {
 @media (min-width: 640px) {
   :root {
     --fs-section-text: 14px;
+    --border-margin: 30px;
+    --section-padding-x: 24px;
+    --section-padding-y: 40px;
   }
 }
 
 @media (min-width: 1200px) {
   :root {
     --fs-section-text: 16px;
+    --border-margin: 60px;
+    --section-padding-x: 70px;
+    --section-padding-y: 50px;
   }
 }
