@@ -3,5 +3,30 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout pageTitle="North Wisp">
-  <h1>Learn Irish Onile</h1>
+  <section class="section hero">
+    <div class="image-contaier">
+      <img class="image" src="/images/landing/landing_hero.svg" />
+    </div>
+    <h1 class="page-title">Learn Irish Onile</h1>
+    <p class="section-text">
+      Flexible program, progress analysis, speaking practice with foreigners
+    </p>
+    <div class="button-holder">
+      <button class="button">First lesson free</button>
+    </div>
+  </section>
 </BaseLayout>
+
+<style>
+  .hero {
+    text-align: center;
+  }
+
+  .page-title {
+    margin-bottom: 22px;
+  }
+
+  .hero .button-holder {
+    margin-top: 22px;
+  }
+</style>

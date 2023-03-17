@@ -34,6 +34,7 @@ button {
   --fs-page-title: 36px;
   --fs-section-title: 30px;
   --fs-section-text: 12px;
+  --fs-button-text: 14px;
 
   --border-margin: 24px;
   --section-padding-x: 16px;
@@ -56,6 +57,54 @@ body {
   min-height: calc(100vh - 2 * var(--border-margin));
 }
 
+img {
+  display: block;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+}
+
 .hidden {
   display: none;
+}
+
+.page-title {
+  font-size: var(--fs-page-title);
+  line-height: 1em;
+  font-family: var(--ff-gothic);
+}
+
+.section {
+  padding: var(--section-padding-y) var(--section-padding-x);
+}
+
+.section-title {
+  font-size: var(--fs-section-title);
+}
+
+.section-text {
+  font-size: var(--fs-section-text);
+}
+
+.button {
+  font-size: var(--fs-button-text);
+  font-weight: 500;
+  border: none;
+  background-color: var(--color-text);
+  color: var(--color-background);
+  padding: 0.5em 2em;
+  cursor: pointer;
+  box-shadow: 3px 3px var(--color-text);
+}
+
+.button:hover {
+  translate: -2px -2px;
+  box-shadow: 5px 5px var(--color-text);
+}
+
+.button:active {
+  translate: 3px 3px;
+  box-shadow: none;
 }
