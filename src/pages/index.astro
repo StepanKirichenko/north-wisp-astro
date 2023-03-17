@@ -4,10 +4,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 <BaseLayout pageTitle="North Wisp">
   <section class="section hero">
-    <div class="image-contaier">
+    <div class="image-container">
       <img class="image" src="/images/landing/landing_hero.svg" />
     </div>
-    <h1 class="page-title">Learn Irish Onile</h1>
+    <h1 class="page-title">Learn Irish Online</h1>
     <p class="section-text">
       Flexible program, progress analysis, speaking practice with foreigners
     </p>
@@ -28,5 +28,53 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
   .hero .button-holder {
     margin-top: 22px;
+  }
+
+  @media (min-width: 640px) {
+    .hero {
+      position: relative;
+      text-align: left;
+    }
+
+    .hero > * {
+      max-width: 50%;
+    }
+
+    .hero .image-container {
+      position: absolute;
+      right: 0;
+      top: 0;
+      max-width: 300px;
+    }
+  }
+
+  @media (min-width: 900px) {
+    .hero {
+      padding-top: 100px;
+      padding-bottom: 120px;
+    }
+
+    .hero .image-container {
+      max-width: 450px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .hero {
+      padding-top: 180px;
+      padding-bottom: 250px;
+    }
+
+    .hero > * {
+      max-width: unset;
+    }
+
+    .hero .image-container {
+      max-width: 800px;
+    }
+
+    .hero .section-text {
+      max-width: 300px;
+    }
   }
 </style>

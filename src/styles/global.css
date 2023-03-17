@@ -54,6 +54,9 @@ html {
 body {
   width: 100%;
   max-width: 1200px;
+}
+
+.page-border {
   margin: var(--border-margin);
   border: 2px solid var(--color-text);
   min-height: calc(100vh - 2 * var(--border-margin));
@@ -123,6 +126,7 @@ img {
 
 @media (min-width: 1200px) {
   :root {
+    --fs-page-title: 50px;
     --fs-section-text: 16px;
     --border-margin: 60px;
     --section-padding-x: 70px;
