@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font: inherit;
+}
+
+img {
+  display: block;
+}
+
+a {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+:root {
+  --color-background: #f2cf2b;
+  --color-text: #000;
+
+  --ff-normal: "Red Hat Display", sans-serif;
+  --ff-gothic: "Dela Gothic One", sans-serif;
+
+  --fs-page-title: 36px;
+  --fs-section-title: 30px;
+  --fs-section-text: 12px;
+
+  --border-margin: 24px;
+}
+
+html {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--ff-normal);
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  width: 100%;
+  max-width: 1200px;
+  margin: var(--border-margin);
+  border: 2px solid var(--color-text);
+  min-height: calc(100vh - 2 * var(--border-margin));
+}
