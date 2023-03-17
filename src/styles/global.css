@@ -19,8 +19,13 @@ ol {
   list-style: none;
 }
 
+button {
+  border: none;
+  background: none;
+}
+
 :root {
-  --color-background: #f2cf2b;
+  --color-background: #f8cb39;
   --color-text: #000;
 
   --ff-normal: "Red Hat Display", sans-serif;
@@ -31,6 +36,8 @@ ol {
   --fs-section-text: 12px;
 
   --border-margin: 24px;
+  --section-padding-x: 16px;
+  --section-padding-y: 40px;
 }
 
 html {
@@ -47,4 +54,8 @@ body {
   margin: var(--border-margin);
   border: 2px solid var(--color-text);
   min-height: calc(100vh - 2 * var(--border-margin));
+}
+
+.hidden {
+  display: none;
 }

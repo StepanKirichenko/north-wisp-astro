@@ -2,5 +2,113 @@
 ---
 
 <header>
-  <nav></nav>
+  <nav>
+    <a href="/">
+      <img src="/logos/north_wisp_logo.svg" width="48" height="26" />
+    </a>
+    <button id="menu-button">
+      <img
+        id="menu-button__icon--closed"
+        class="visible"
+        src="/icons/hamburger.svg"
+      />
+      <img id="menu-button__icon--open" src="/icons/cross.svg" />
+    </button>
+    <ul class="links-holder">
+      <li>
+        <a class="link">Programs</a>
+      </li>
+      <li>
+        <a class="link">Blog</a>
+      </li>
+      <li>
+        <a class="link">About us</a>
+      </li>
+      <li>
+        <button class="login-button">Log in</button>
+      </li>
+    </ul>
+  </nav>
 </header>
+
+<style>
+  header {
+    padding: var(--section-padding-x);
+  }
+
+  nav {
+    display: grid;
+    grid-template-columns: auto auto;
+    vertical-align: center;
+  }
+
+  #menu-button {
+    border: none;
+    background: none;
+    margin-left: auto;
+  }
+
+  #menu-button > img {
+    display: none;
+  }
+
+  #menu-button > img.visible {
+    display: block;
+  }
+
+  .links-holder {
+    display: none;
+  }
+
+  .links-holder.visible {
+    grid-column: 1 / 3;
+    margin: 60px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .link {
+    font-size: 25px;
+  }
+
+  .login-button {
+    font-size: 16px;
+    color: var(--color-background);
+    background-color: var(--color-text);
+    padding: 0.5em 2em;
+    margin-top: 16px;
+  }
+
+  @media (min-width: 640px) {
+    .link {
+      font-size: 30px;
+    }
+  }
+
+  @media (min-width: 900px) {
+    #menu-button {
+      display: none;
+    }
+
+    .links-holder {
+      grid-column: unset;
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .link {
+      font-size: 18px;
+    }
+
+    .login-button {
+      margin-top: 0;
+      font-size: 16px;
+    }
+  }
+</style>
+
+<script src="../scripts/menu.js"></script>
