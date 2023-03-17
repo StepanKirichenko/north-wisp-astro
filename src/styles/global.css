@@ -111,3 +111,15 @@ img {
   translate: 3px 3px;
   box-shadow: none;
 }
+
+@media (min-width: 640px) {
+  :root {
+    --fs-section-text: 14px;
+  }
+}
+
+@media (min-width: 1200px) {
+  :root {
+    --fs-section-text: 16px;
+  }
+}
