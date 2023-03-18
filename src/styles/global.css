@@ -34,6 +34,7 @@ button {
   --fs-page-title: 36px;
   --fs-section-title: 30px;
   --fs-section-text: 12px;
+  --fs-subsection-title: 16px;
   --fs-button-text: 14px;
 
   --border-margin: 24px;
@@ -87,7 +88,9 @@ img {
 }
 
 .section-title {
+  font-family: var(--ff-gothic);
   font-size: var(--fs-section-title);
+  margin-bottom: 10px;
 }
 
 .section-text {
@@ -115,12 +118,25 @@ img {
   box-shadow: none;
 }
 
+.right-aligned-button {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 32px;
+}
+
 @media (min-width: 640px) {
   :root {
     --fs-section-text: 14px;
+    --fs-subsection-title: 18px;
     --border-margin: 30px;
     --section-padding-x: 24px;
     --section-padding-y: 40px;
+  }
+}
+
+@media (min-width: 960px) {
+  .section-text {
+    max-width: 50%;
   }
 }
 
@@ -128,6 +144,7 @@ img {
   :root {
     --fs-page-title: 50px;
     --fs-section-text: 16px;
+    --fs-subsection-title: 22px;
     --border-margin: 60px;
     --section-padding-x: 70px;
     --section-padding-y: 50px;
