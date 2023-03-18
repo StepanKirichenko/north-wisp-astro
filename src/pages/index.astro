@@ -1,5 +1,6 @@
 ---
 import ProgramsList from "../components/ProgramsList.astro";
+import TeamInfoSection from "../components/TeamInfoSection.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import "../styles/landing.css";
 ---
@@ -32,11 +33,5 @@ import "../styles/landing.css";
     </div>
   </section>
 
-  <section class="team-section">
-    <h2 class="section-title">Our team</h2>
-    <p class="section-text">
-      The teachers at the Irish language school are experienced and certified
-      professionals who are passionate about the Irish language and culture.
-    </p>
-  </section>
+  <TeamInfoSection />
 </BaseLayout>

@@ -41,7 +41,7 @@ button {
   --section-padding-x: 16px;
   --section-padding-y: 40px;
 
-  --border: 2px solid var(--color-text);
+  --border: 1px solid var(--color-text);
 }
 
 html {
@@ -59,7 +59,7 @@ body {
 
 .page-border {
   margin: var(--border-margin);
-  border: 2px solid var(--color-text);
+  border: var(--border);
   min-height: calc(100vh - 2 * var(--border-margin));
 }
 
@@ -152,5 +152,6 @@ img {
     --border-margin: 60px;
     --section-padding-x: 70px;
     --section-padding-y: 50px;
+    --border: 2px solid var(--color-text);
   }
 }

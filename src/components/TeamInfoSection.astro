@@ -1,0 +1,196 @@
+<section class="team-section">
+  <div class="team-section__head">
+    <h2 class="section-title">Our team</h2>
+    <p class="section-text">
+      The teachers at the Irish language school are experienced and certified
+      professionals who are passionate about the Irish language and culture.
+    </p>
+  </div>
+  <div id="team-member-info" class="team-member-info">
+    <div class="team-member-info__image-container">
+      <img
+        id="image"
+        src="/images/team/emily_arthur.png"
+        alt="Emily Arturh"
+        width="305"
+        height="312"
+        class="team-member-info__image"
+      />
+    </div>
+    <div class="team-member-info__name-section">
+      <h3 id="name" class="team-member-info__name">Emily Arturh</h3>
+      <p id="job" class="team-member-info__job">Education manager</p>
+    </div>
+    <div class="team-member-info__description-container">
+      <p id="description" class="team-member-info__description">
+        Emily is from County Armagh. She received her bachelor's degree in Irish
+        and French from Queen's University Belfast and completed her first
+        degree in both subjects in 2015. She then completed her MA and PhD in
+        Irish from the same institution, completing her PhD in 2020. She has a
+        special interest. in contemporary Irish literature, especially travel
+        and emigration literature.
+      </p>
+    </div>
+    <div class="team-member-info__navigation">
+      <button id="button-left" class="team-member-info__button">
+        <img src="/icons/arrow_left.svg" />
+      </button>
+      <button id="button-right" class="team-member-info__button">
+        <img src="/icons/arrow_right.svg" />
+      </button>
+    </div>
+  </div>
+</section>
+
+<style>
+  .team-section__head {
+    padding: var(--section-padding-y) var(--section-padding-x) 0;
+  }
+
+  .team-section .section-text {
+    margin-bottom: 24px;
+  }
+
+  .team-member-info__image-container,
+  .team-member-info__name-section,
+  .team-member-info__description-container {
+    margin-left: var(--section-padding-x);
+    margin-right: var(--section-padding-x);
+  }
+
+  .team-member-info__navigation {
+    margin-top: 40px;
+    display: flex;
+    justify-content: flex-end;
+    border-top: var(--border);
+    border-bottom: var(--border);
+  }
+
+  .team-member-info__button {
+    border-left: var(--border);
+    padding: 12px;
+    cursor: pointer;
+  }
+
+  .team-member-info__button img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .team-member-info__button:active img {
+    scale: 80% 80%;
+  }
+
+  .team-member-info__image-container {
+    border: var(--border);
+    margin-bottom: 24px;
+  }
+
+  .team-member-info__image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+
+  .team-member-info__name-section {
+    margin-bottom: 20px;
+  }
+
+  .team-member-info__name {
+    font-size: var(--fs-subsection-title);
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+
+  .team-member-info__job {
+    font-size: 12px;
+  }
+
+  @media (min-width: 640px) {
+    .team-member-info__image {
+      aspect-ratio: 2 / 1;
+    }
+  }
+
+  @media (min-width: 960px) {
+    .team-section {
+      padding-bottom: var(--section-padding-y);
+      border-bottom: var(--border);
+    }
+
+    .team-member-info {
+      margin-left: var(--section-padding-x);
+      margin-right: var(--section-padding-x);
+      border: var(--border);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 64px 1fr 64px;
+      grid-auto-flow: row;
+    }
+
+    .team-member-info__image-container,
+    .team-member-info__name-section,
+    .team-member-info__description-container {
+      margin: 0;
+    }
+
+    .team-member-info__name-section,
+    .team-member-info__description-container {
+      padding-left: 56px;
+      padding-right: 10px;
+    }
+
+    .team-member-info__name-section {
+      /* padding-top: 10px; */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-bottom: var(--border);
+    }
+
+    .team-member-info__description-container {
+      padding-top: 20px;
+    }
+
+    .team-member-info__navigation {
+      margin-top: 0;
+      border-bottom: none;
+    }
+
+    .team-member-info__button {
+      padding: 18px;
+    }
+
+    .team-member-info__button img {
+      width: 26px;
+      height: 26px;
+    }
+
+    .team-member-info__image-container {
+      grid-row: 1 / -1;
+      margin-bottom: 0;
+      border: none;
+      border-right: var(--border);
+    }
+
+    .team-member-info__image {
+      aspect-ratio: 1 / 1;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .team-member-info {
+      grid-template-rows: 80px 1fr 80px;
+    }
+
+    .team-member-info__button {
+      padding: 20px;
+    }
+
+    .team-member-info__button img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+</style>
