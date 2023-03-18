@@ -1,0 +1,36 @@
+---
+import ProgramsList from "../components/ProgramsList.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/programs.css";
+---
+
+<BaseLayout pageTitle="Programs" pageName="programs">
+  <section class="section">
+    <h1 class="page-title">Programs</h1>
+    <p class="section-text hero__text">
+      The North Wisp school program is an excellent opportunity for anyone
+      interested in learning the Irish language and culture. The program offers
+      a supportive and engaging environment for learners of all levels.
+    </p>
+    <ProgramsList />
+  </section>
+
+  <section class="section consultation-section">
+    <h2 class="section-title">Free consultation</h2>
+    <div class="consultation__image-container">
+      <img
+        src="/images/landing/duck.png"
+        class="image"
+        width="427"
+        height="446"
+      />
+    </div>
+    <p class="section-text">
+      We will determine your language level and help you understand which
+      learning format is right for you.
+    </p>
+    <div class="consultation__button-container">
+      <button class="button">Submit your application</button>
+    </div>
+  </section>
+</BaseLayout>
