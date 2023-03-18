@@ -132,6 +132,10 @@ img {
     --section-padding-x: 24px;
     --section-padding-y: 40px;
   }
+
+  .section-text {
+    max-width: 70%;
+  }
 }
 
 @media (min-width: 960px) {
