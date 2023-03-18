@@ -1,0 +1,63 @@
+---
+const { name, level, weeks, hours, image } = Astro.props;
+
+const imagePath = `/images/programs/${image}`;
+---
+
+<div class="program-card">
+  <h3 class="program-card__title">{name}</h3>
+  <div class="program-card__info">
+    <p class="program-card__info__paragraph">{level} level</p>
+    <p class="program-card__info__paragraph">{weeks} weeks</p>
+    <p class="program-card__info__paragraph">{hours} hours</p>
+  </div>
+
+  <div class="program-card__image-container">
+    <img class="program-card__image" src={imagePath} />
+  </div>
+  <a href="#" class="program-card__link">
+    <img src="/icons/arrow_down_right.svg" />
+  </a>
+</div>
+
+<style>
+  .program-card {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    padding: 20px;
+    border: 2px solid var(--color-text);
+    box-shadow: 2px 2px var(--color-text);
+  }
+
+  .program-card__title {
+    font-size: var(--fs-subsection-title);
+    font-weight: 700;
+  }
+
+  .program-card__info__paragraph {
+    font-size: var(--fs-section-text);
+  }
+
+  .program-card__image-container {
+    position: absolute;
+    right: 10%;
+    bottom: 10%;
+    left: 20%;
+  }
+
+  .program-card__image {
+    width: 100%;
+    height: auto;
+  }
+
+  .program-card__link {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+  }
+</style>
