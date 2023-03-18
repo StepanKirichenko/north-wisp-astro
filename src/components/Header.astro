@@ -1,4 +1,21 @@
 ---
+import { programs } from "../data/programs";
+
+const { pageName } = Astro.props;
+const pages = [
+  {
+    name: "programs",
+    title: "Programs",
+  },
+  {
+    name: "blog",
+    title: "Blog",
+  },
+  {
+    name: "about",
+    title: "About us",
+  },
+];
 ---
 
 <header>
@@ -15,15 +32,18 @@
       <img id="menu-button__icon--open" src="/icons/cross.svg" />
     </button>
     <ul class="links-holder">
-      <li>
-        <a class="link">Programs</a>
-      </li>
-      <li>
-        <a class="link">Blog</a>
-      </li>
-      <li>
-        <a class="link">About us</a>
-      </li>
+      {
+        pages.map((page) => (
+          <li>
+            <a
+              href={`/${page.name}`}
+              class={page.name === pageName ? "link link--current" : "link"}
+            >
+              {page.title}
+            </a>
+          </li>
+        ))
+      }
       <li>
         <button class="login-button">Log in</button>
       </li>
@@ -71,6 +91,10 @@
 
   .link {
     font-size: 25px;
+  }
+
+  .link--current {
+    font-weight: 700;
   }
 
   .login-button {
