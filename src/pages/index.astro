@@ -1,8 +1,10 @@
 ---
 import ProgramsList from "../components/ProgramsList.astro";
+import ReviewCard from "../components/ReviewCard.astro";
 import TeamInfoSection from "../components/TeamInfoSection.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import "../styles/landing.css";
+import { reviews } from "../data/reviews";
 ---
 
 <BaseLayout pageTitle="North Wisp">
@@ -46,6 +48,16 @@ import "../styles/landing.css";
     </p>
     <div class="consultation__button-container">
       <button class="button">Submit your application</button>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">Reviews</h2>
+    <div class="reviews-container">
+      {reviews.map((review) => <ReviewCard {...review} />)}
+    </div>
+    <div class="right-aligned-button">
+      <button class="button">See all</button>
     </div>
   </section>
 </BaseLayout>

@@ -17,6 +17,14 @@
   margin-top: 24px;
 }
 
+.reviews-container {
+  margin: 40px 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 20px;
+  column-gap: 26px;
+}
+
 @media (min-width: 640px) {
   .hero {
     position: relative;
@@ -56,6 +64,16 @@
   .consultation__button-container {
     justify-content: flex-start;
     align-self: flex-start;
+  }
+
+  .reviews-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 960px) {
+  .reviews-container {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 

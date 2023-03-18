@@ -1,0 +1,51 @@
+---
+const { reviewer, course, rating, text } = Astro.props;
+---
+
+<div class="review-card">
+  <h3 class="review-card__name">{reviewer}</h3>
+  <p class="review-card__course">Course {course}</p>
+  <div class="review-card__rating">
+    {
+      [1, 2, 3, 4, 5].map((i) => (
+        <img src={`/icons/${i <= rating ? "star_filled" : "star_empty"}.svg`} />
+      ))
+    }
+    <!-- <img src="/icons/star_filled.svg" />
+    <img src="/icons/star_filled.svg" />
+    <img src="/icons/star_filled.svg" />
+    <img src="/icons/star_filled.svg" />
+    <img src="/icons/star_empty.svg" /> -->
+  </div>
+  <p class="review-card__text">
+    {text}
+  </p>
+</div>
+
+<style>
+  .review-card {
+    border: var(--border);
+    box-shadow: 2px 2px var(--color-text);
+    padding: 20px;
+    padding-bottom: 30px;
+  }
+
+  .review-card__name {
+    font-size: var(--fs-subsection-title);
+    font-weight: 700;
+  }
+
+  .review-card__course {
+    font-size: var(--fs-h5);
+  }
+
+  .review-card__rating {
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  .review-card__text {
+    font-size: var(--fs-section-text);
+  }
+</style>
