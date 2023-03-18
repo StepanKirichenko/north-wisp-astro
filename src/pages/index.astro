@@ -1,6 +1,7 @@
 ---
 import ProgramsList from "../components/ProgramsList.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/landing.css";
 ---
 
 <BaseLayout pageTitle="North Wisp">
@@ -31,62 +32,3 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     </div>
   </section>
 </BaseLayout>
-
-<style>
-  .hero {
-    text-align: center;
-  }
-
-  .page-title {
-    margin-bottom: 22px;
-  }
-
-  .hero .button-holder {
-    margin-top: 22px;
-  }
-
-  @media (min-width: 640px) {
-    .hero {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .hero .section-text {
-      max-width: 300px;
-    }
-
-    .hero .image-container {
-      max-width: 550px;
-    }
-  }
-
-  @media (min-width: 1200px) {
-    .hero {
-      text-align: left;
-      display: block;
-      position: relative;
-      max-width: unset;
-      padding-top: 130px;
-      padding-bottom: 250px;
-    }
-
-    .hero > * {
-      max-width: unset;
-    }
-
-    .hero .image-container {
-      position: absolute;
-      left: unset;
-      right: -100px;
-      top: -50px;
-      max-width: 800px;
-      width: 800px;
-    }
-
-    .hero .section-text {
-      max-width: 300px;
-    }
-  }
-</style>
