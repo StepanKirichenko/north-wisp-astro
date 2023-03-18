@@ -1,0 +1,37 @@
+---
+import ProgramCard from "./ProgramCard.astro";
+import { programs } from "../data/programs";
+
+const { count = programs.length } = Astro.props;
+---
+
+<ul class="programs-list">
+  {
+    programs.slice(0, count).map((program) => (
+      <li>
+        <ProgramCard {...program} />
+      </li>
+    ))
+  }
+</ul>
+
+<style>
+  .programs-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 16px;
+    row-gap: 16px;
+  }
+
+  @media (min-width: 640px) {
+    .programs-list {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (min-width: 960px) {
+    .programs-list {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+</style>
