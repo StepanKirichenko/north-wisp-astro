@@ -35,6 +35,39 @@
   font-size: var(--fs-section-text);
 }
 
+.hiring-links__list {
+  list-style: none;
+  margin-top: 50px;
+}
+
+.hiring-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: var(--border);
+  box-shadow: 2px 2px var(--color-text);
+  padding: 12px 24px;
+  font-size: var(--fs-subsection-title);
+  font-weight: 700;
+  margin-bottom: 20px;
+  gap: 16px;
+}
+
+.hiring-link img {
+  width: 20px;
+  height: 20px;
+}
+
+.hiring-link:hover {
+  translate: -2px -2px;
+  box-shadow: 4px 4px var(--color-text);
+}
+
+.hiring-link:active {
+  translate: 2px 2px;
+  box-shadow: none;
+}
+
 @media (min-width: 640px) {
   .hero__bottom-part .section-text {
     max-width: 70%;
@@ -42,6 +75,10 @@
 
   .leaders {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .hiring-link {
+    padding: 20px 40px;
   }
 }
 
