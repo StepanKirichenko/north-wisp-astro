@@ -3,16 +3,18 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout pageTitle="North Wisp">
-  <section class="section hero">
-    <div class="image-container">
-      <img class="image" src="/images/landing/landing_hero.svg" />
-    </div>
-    <h1 class="page-title">Learn Irish Online</h1>
-    <p class="section-text">
-      Flexible program, progress analysis, speaking practice with foreigners
-    </p>
-    <div class="button-holder">
-      <button class="button">First lesson free</button>
+  <section class="section">
+    <div class="hero">
+      <div class="image-container">
+        <img class="image" src="/images/landing/landing_hero.svg" />
+      </div>
+      <h1 class="page-title">Learn Irish Online</h1>
+      <p class="section-text">
+        Flexible program, progress analysis, speaking practice with foreigners
+      </p>
+      <div class="button-holder">
+        <button class="button">First lesson free</button>
+      </div>
     </div>
   </section>
 </BaseLayout>
@@ -34,34 +36,46 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     .hero {
       position: relative;
       text-align: left;
-    }
-
-    .hero > * {
       max-width: 50%;
     }
 
     .hero .image-container {
       position: absolute;
-      right: 0;
-      top: 0;
-      max-width: 300px;
+      left: 100%;
+      top: -25px;
+      width: 300px;
     }
   }
 
-  @media (min-width: 900px) {
+  @media (min-width: 850px) {
+    .hero {
+      padding-top: 70px;
+      padding-bottom: 100px;
+    }
+
+    .hero .image-container {
+      top: 25px;
+      width: 400px;
+    }
+  }
+
+  @media (min-width: 1000px) {
     .hero {
       padding-top: 100px;
       padding-bottom: 120px;
     }
 
     .hero .image-container {
-      max-width: 450px;
+      left: 85%;
+      top: -25px;
+      width: 550px;
     }
   }
 
   @media (min-width: 1200px) {
     .hero {
-      padding-top: 180px;
+      max-width: unset;
+      padding-top: 130px;
       padding-bottom: 250px;
     }
 
@@ -70,7 +84,11 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     }
 
     .hero .image-container {
+      left: unset;
+      right: -100px;
+      top: -50px;
       max-width: 800px;
+      width: 800px;
     }
 
     .hero .section-text {
