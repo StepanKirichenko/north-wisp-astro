@@ -13,9 +13,35 @@
   max-width: 80%;
 }
 
+.leaders {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 30px;
+  column-gap: 10px;
+}
+
+.leader__image {
+  border: var(--border);
+  box-shadow: 2px 2px var(--color-text);
+  margin-bottom: 10px;
+}
+
+.leader__name {
+  font-size: var(--fs-subsection-title);
+  font-weight: 700;
+}
+
+.leader__job {
+  font-size: var(--fs-section-text);
+}
+
 @media (min-width: 640px) {
   .hero__bottom-part .section-text {
     max-width: 70%;
+  }
+
+  .leaders {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 

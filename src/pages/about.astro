@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import "../styles/about.css";
+import { team } from "../data/team";
 ---
 
 <BaseLayout pageTitle="About us" pageName="about">
@@ -19,6 +20,25 @@ import "../styles/about.css";
         learners and fluent speakers of Irish to improve their knowledge of the
         language.
       </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">Meet our leaders</h2>
+    <div class="leaders">
+      {
+        team.map((person) => (
+          <div class="leader">
+            <img
+              src={`/images/team/${person.image}`}
+              alt={person.name}
+              class="image leader__image"
+            />
+            <h3 class="leader__name">{person.name}</h3>
+            <p class="leader__job">{person.job}</p>
+          </div>
+        ))
+      }
     </div>
   </section>
 </BaseLayout>
