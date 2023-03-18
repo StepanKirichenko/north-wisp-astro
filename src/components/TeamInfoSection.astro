@@ -201,6 +201,11 @@
 <script>
   import { team } from "../data/team";
 
+  team.forEach((person) => {
+    const image = new Image();
+    image.src = `/images/team/${person.image}`;
+  });
+
   let currentTeamMember = 0;
 
   const teamMemberInfo = document.querySelector("#team-member-info");
