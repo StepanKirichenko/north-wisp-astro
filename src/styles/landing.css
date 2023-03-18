@@ -10,6 +10,11 @@
   margin-top: 22px;
 }
 
+.team-section {
+  padding: var(--section-padding-y) var(--section-padding-x) 0;
+  /* border-bottom: var(--border); */
+}
+
 @media (min-width: 640px) {
   .hero {
     position: relative;
