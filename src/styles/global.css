@@ -139,6 +139,10 @@ img {
 }
 
 @media (min-width: 960px) {
+  :root {
+    --fs-section-title: 34px;
+  }
+
   .section-text {
     max-width: 50%;
   }
@@ -147,6 +151,7 @@ img {
 @media (min-width: 1200px) {
   :root {
     --fs-page-title: 50px;
+    --fs-section-title: 40px;
     --fs-section-text: 16px;
     --fs-subsection-title: 22px;
     --border-margin: 60px;

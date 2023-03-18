@@ -10,6 +10,13 @@
   margin-top: 22px;
 }
 
+.consultation__button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 24px;
+}
+
 @media (min-width: 640px) {
   .hero {
     position: relative;
@@ -24,6 +31,31 @@
 
   .hero .image-container {
     max-width: 550px;
+  }
+
+  .consultation-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr auto 1fr;
+  }
+
+  .consultation-section .section-title {
+    align-self: flex-end;
+  }
+
+  .consultation-section .section-text {
+    max-width: 100%;
+  }
+
+  .consultation__image-container {
+    order: 2;
+    grid-column: 2 / 3;
+    grid-row: 1 / 4;
+  }
+
+  .consultation__button-container {
+    justify-content: flex-start;
+    align-self: flex-start;
   }
 }
 
