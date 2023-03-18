@@ -1,3 +1,6 @@
+---
+---
+
 <section class="team-section">
   <div class="team-section__head">
     <h2 class="section-title">Our team</h2>
@@ -194,3 +197,38 @@
     }
   }
 </style>
+
+<script>
+  import { team } from "../data/team";
+
+  let currentTeamMember = 0;
+
+  const teamMemberInfo = document.querySelector("#team-member-info");
+  const teamMemberImage = teamMemberInfo.querySelector(
+    "#image"
+  ) as HTMLImageElement;
+  const teamMemberName = teamMemberInfo.querySelector("#name") as HTMLElement;
+  const teamMemberJob = teamMemberInfo.querySelector("#job") as HTMLElement;
+  const teamMemberDescription = teamMemberInfo.querySelector(
+    "#description"
+  ) as HTMLElement;
+  const teamMemberButtonLeft = teamMemberInfo.querySelector("#button-left");
+  const teamMemberButtonRight = teamMemberInfo.querySelector("#button-right");
+
+  function changeCurrentTeamMember(direction) {
+    currentTeamMember =
+      (currentTeamMember + direction + team.length) % team.length;
+    const teamMember = team[currentTeamMember];
+    teamMemberImage.src = `/images/team/${teamMember.image}`;
+    teamMemberName.innerText = teamMember.name;
+    teamMemberJob.innerText = teamMember.job;
+    teamMemberDescription.innerText = teamMember.description;
+  }
+
+  teamMemberButtonLeft.addEventListener("click", () =>
+    changeCurrentTeamMember(-1)
+  );
+  teamMemberButtonRight.addEventListener("click", () =>
+    changeCurrentTeamMember(1)
+  );
+</script>
