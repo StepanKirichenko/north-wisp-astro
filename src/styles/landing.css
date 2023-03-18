@@ -10,6 +10,29 @@
   margin-top: 22px;
 }
 
+.hero__features {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 30px;
+  column-gap: 100px;
+}
+
+.hero__feature__number {
+  font-family: var(--ff-gothic);
+  font-size: 40px;
+  margin-bottom: 8px;
+}
+
+.hero__feature__title {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.hero__feature__description {
+  font-size: var(--fs-section-text);
+}
+
 .consultation__button-container {
   display: flex;
   align-items: center;
@@ -39,6 +62,10 @@
 
   .hero .image-container {
     max-width: 550px;
+  }
+
+  .hero__features {
+    grid-template-columns: 1fr 1fr;
   }
 
   .consultation-section {
@@ -72,12 +99,21 @@
 }
 
 @media (min-width: 960px) {
+  .hero__features {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 18px;
+  }
+
   .reviews-container {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
 @media (min-width: 1200px) {
+  .section:has(.hero) {
+    border-bottom: none;
+  }
+
   .hero {
     text-align: left;
     display: block;
@@ -102,5 +138,9 @@
 
   .hero .section-text {
     max-width: 300px;
+  }
+
+  .hero__features-section {
+    padding-top: 0;
   }
 }
