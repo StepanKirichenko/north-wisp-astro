@@ -60,7 +60,7 @@ body {
 .page-border {
   margin: var(--border-margin);
   border: var(--border);
-  min-height: calc(100vh - 2 * var(--border-margin));
+  min-height: calc(100dvh - 2 * var(--border-margin));
 }
 
 img {
