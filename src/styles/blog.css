@@ -161,8 +161,8 @@
 
 @media (min-width: 1200px) {
   .hero {
-    padding-top: 220px;
-    padding-bottom: 300px;
+    padding-top: 120px;
+    padding-bottom: 200px;
     position: relative;
     display: block;
   }
@@ -179,7 +179,7 @@
   .hero__image-container {
     position: absolute;
     right: 0;
-    top: -5px;
+    top: -70px;
     left: 50%;
   }
 
