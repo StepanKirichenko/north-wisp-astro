@@ -21,7 +21,12 @@ const pages = [
 <header>
   <nav>
     <a href="/">
-      <img src="/logos/north_wisp_logo.svg" width="48" height="26" />
+      <img
+        class="site-logo"
+        src="/logos/north_wisp_logo.svg"
+        width="48"
+        height="26"
+      />
     </a>
     <button id="menu-button">
       <img
@@ -106,6 +111,11 @@ const pages = [
   }
 
   @media (min-width: 640px) {
+    .site-logo {
+      width: 89px;
+      height: 45px;
+    }
+
     .link {
       font-size: 30px;
     }
